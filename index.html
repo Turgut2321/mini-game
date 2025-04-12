@@ -1,0 +1,45 @@
+ <!-- index.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Taş Kağıt Makas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Taş - Kağıt - Makas Oyunu</h1>
+
+  <div class="buttons">
+    <button onclick="oyna('taş')">🪨 Taş</button>
+    <button onclick="oyna('kağıt')">📄 Kağıt</button>
+    <button onclick="oyna('makas')">✂️ Makas</button>
+  </div>
+
+  <div id="secimler">
+    <button id="yenidenOyna" onclick="yenidenOyna()">Yeniden Oyna</button>
+    <div id="oyuncuSecim">
+      <h2>Sizin Seçiminiz:</h2>
+      <img id="oyuncuSecimResim" src="" alt="Seçiminiz" width="100">
+    </div>
+    <div id="bilgisayarSecim">
+      <h2>Bilgisayarın Seçimi:</h2>
+      <img id="bilgisayarSecimResim" src="" alt="Bilgisayarın Seçimi" width="100">
+    </div>
+  </div>
+  
+
+  <div id="sonuc"></div>
+
+  <div class="puanlar">
+    <p>Senin Puanın: <span id="oyuncuPuan">0</span></p>
+    <p>Bilgisayarın Puanı: <span id="bilgisayarPuan">0</span></p>
+  </div>
+
+  <script src="script.js"></script>
+
+  <audio id="winSound" src="win.mp3"></audio>
+  <audio id="loseSound" src="lose.mp3"></audio>
+  <audio id="drawSound" src="draw.mp3"></audio>
+
+</body>
+</html>
